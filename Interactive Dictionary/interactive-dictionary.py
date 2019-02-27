@@ -12,12 +12,16 @@ def display_definition(word):
     elif word.upper() in words:
         return words[word.upper()]
     elif get_close_matches(word, words.keys(), cutoff=0.8):
-        similar_word = get_close_matches(word, words.keys(), cutoff=0.8)[0]
-        answer = input("Did you mean %s instead? (y/n): " % similar_word)
-        if answer.lower() == 'y':
-            return words[similar_word]
-        else:
-            return "The word '%s' doesn't exist. Please double check it." % word
+        output = processing_similar_words(word)
+        return output
+    else:
+        return "The word '%s' doesn't exist. Please double check it." % word
+
+def processing_similar_words(word):
+    similar_word = get_close_matches(word, words.keys(), cutoff=0.8)[0]
+    answer = input("Did you mean %s instead? (y/n): " % similar_word)
+    if answer.lower() == 'y':
+        return words[similar_word]
     else:
         return "The word '%s' doesn't exist. Please double check it." % word
 
