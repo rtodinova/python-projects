@@ -7,7 +7,7 @@ Here is a description of the projects included:
 
 ![Screenshot of the map](https://i.imgur.com/u5NxskS.png)
 
-3. Website Blocker - blocking given websites for a specific time of the day (for example - blocking facebook for the working hours). The application contains of two python files - one for Windows users with .pyw extension and one for Mac and Linux users.
+3. Website Blocker - blocking given websites for a specific time of the day (for example - blocking facebook for the working hours). The application consists of two python files - one for Windows users with .pyw extension and one for Mac and Linux users.
 How to schedule the Website Blocker?
 
 For Windows users:
